@@ -2,33 +2,23 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Program {
-    public static void display(ArrayList<Integer> arr, int start){
-        for(int i = 0; i < start * 2; i++){
-            System.out.print(" ");
-        }
-        for(int e : arr){
-            System.out.print(e + " ");
-        }
-        System.out.println();
-    }
-    
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
         
         int n = sc.nextInt();
-
-        ArrayList<Integer> arr = new ArrayList<>();
-
         int start = n;
+        
         for(int i = 0; i <= n; i++){
-            if(i > 0){
-                arr.add(i);
-                arr.add(0, i);
+            for(int s = 0; s < start * 2; s++){
+                System.out.print(" ");
             }
-            else{
-                arr.add(i);
+            for(int ele = i; ele >= 0; ele--){
+                System.out.print(ele + " ");
             }
-            display(arr, start);
+            for(int ele = 1; ele <= i; ele++){
+                System.out.print(ele + " ");
+            }
+            System.out.println();
             start--;
         }
     }
