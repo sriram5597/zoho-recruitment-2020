@@ -11,6 +11,7 @@ public class Program {
         }
         System.out.println();
     }
+    
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
         
@@ -22,7 +23,6 @@ public class Program {
         for(int i = 0; i <= n; i++){
             if(i > 0){
                 arr.add(i);
-                
                 arr.add(0, i);
             }
             else{
